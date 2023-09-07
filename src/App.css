@@ -15,3 +15,13 @@
     justify-content: center;
     background-color: white;
 }
+
+svg {
+    stroke-width: 15px;
+    stroke: #ff665c;
+    fill: none;
+    stroke-linecap: round;
+}
+.cross {
+    stroke: #ec088e;
+}
