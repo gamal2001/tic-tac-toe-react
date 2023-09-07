@@ -1,35 +1,67 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+const EMPTY = "EMPTY";
+const CIRCLE = "CIRCLE";
+const CROSS = "CROSS";
+function TicTacToe() {
+  const player = CIRCLE;
+  const position = [
+    EMPTY,
+    EMPTY,
+    EMPTY,
+    CIRCLE,
+    EMPTY,
+    CROSS,
+    EMPTY,
+    EMPTY,
+    EMPTY,
+  ];
+  return (
+    <div className="grid">
+      <Square position={0} value={position[0]} />
+      <Square position={1} value={position[1]} />
+      <Square position={2} value={position[2]} />
+      <Square position={3} value={position[3]} />
+      <Square position={4} value={position[4]} />
+      <Square position={5} value={position[5]} />
+      <Square position={6} value={position[6]} />
+      <Square position={7} value={position[7]} />
+      <Square position={8} value={position[8]} />
+    </div>
+  );
+}
 
-function App() {
-  const [count, setCount] = useState(0)
+function Square({position,value}) {
+  return (
+  <div className='square'>
+      {value === CIRCLE && <Circle/>}
+      {value === CROSS && <Cross/>}
+      
+  </div>
+);
+}
 
+function Circle() {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div>Circle</div>
     </>
   )
 }
 
-export default App
+function Cross() {
+  return (
+    <>
+      <div>Cross</div>
+    </>
+  )
+}
+
+function Result() {
+  return (
+  <div>
+    <h1>Result</h1>
+  </div>
+);
+}
+
+export default TicTacToe;
