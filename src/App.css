@@ -4,7 +4,7 @@
   grid-template-rows: auto auto auto;
   column-gap: 10px;
   row-gap: 10px;
-  background-color: lightgray;
+  background-color: #0DA192;
 }
 
 .square {
@@ -13,7 +13,7 @@
   height: 100px;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: #14BDAC;
 }
 
 svg {
@@ -23,7 +23,10 @@ svg {
   stroke-linecap: round;
 }
 .cross {
-  stroke: #ec088e;
+  stroke: #545454;
+}
+.circle {
+  stroke: white;
 }
 
 .result {
